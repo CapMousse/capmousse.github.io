@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<article>
+  <section>
+  <div>
+    <h1><a href="{{ page.url | absolute_url }}">{{ page.title }}</a></h1>
+    {{ content }}
+
+    {% if page.links %}
+      <div class="buttons">
+        <ul>
+          {% for link in page.links %}
+          <li>
+            <a class="{{ link.name | slugify  }}" href="{{ link.url }}">
+              {{ link.name }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+
+    <footer>
+      <time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
+    </footer>
+  </div>
+  </section>
+  <picture>
+    <a href="{{ page.url | absolute_url }}">
+      <img src="{{ page.illustration.url }}" alt="{{ page.illustration.alt }}">
+    </a>
+  </picture>
+</article>

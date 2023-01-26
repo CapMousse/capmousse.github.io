@@ -1,0 +1,17 @@
+<article>
+  <section>
+  <div>
+    <h1><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h1>
+    <p>{{ post.exerpt }}</p>
+    <footer>
+      <p><a href="{{ post.url | absolute_url }}">Read more</a></p>
+      <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_string }}</time>
+    </footer>
+  </div>
+  </section>
+  <picture>
+    <a href="{{ post.url | absolute_url }}">
+      <img src="{{ post.illustration.url }}" alt="{{ post.illustration.alt }}">
+    </a>
+  </picture>
+</article>

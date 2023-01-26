@@ -1,0 +1,468 @@
+ *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a, button {
+  cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input, textarea {
+  -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+
+/* preformatted text - use only for this feature */
+pre {
+  all: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::placeholder {
+  color: unset;
+}
+
+/* remove default dot (•) sign */
+::marker {
+  content: initial;
+}
+
+/* fix the feature of 'hidden' attribute.
+ display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none;
+}
+
+/* revert for bug in Chromium browsers
+ - fix for the content editable attribute will work properly.
+ - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable="false"])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable="true"]) {
+  -webkit-user-drag: element;
+}
+
+body {
+  background: url(/assets/backgrounds/exploration.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+html, html body {
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+}
+
+strong {
+  font-weight: bold;
+  color: white;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+#main > section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Revert Modal native behavior */
+:where(dialog:modal) {
+  all: revert;
+}
+
+#main > header {
+  height: 3rem;
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#main > header ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 3rem;
+  color: #cccccc;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#main > header ul li:first-child {
+  margin-right: auto;
+}
+
+#main > header ul li:not(:first-child) a {
+  padding: 0 1rem;
+  transition: all ease .3s;
+}
+
+#main > header ul li:not(:first-child) a:hover {
+  background: #cccccc;
+  color: #222;
+}
+
+#main > header ul a{
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  color: #cccccc;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#main > header img {
+  height: 2rem;
+  margin: .5vh 1vh .5vh .5vh;
+  width: auto;
+  display: inline-block;
+  border-radius: 100%;
+}
+
+#video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+article {
+  flex: 1 1 auto;
+  padding: 8rem;
+  flex-direction: row;
+  justify-content: center;
+  display: flex;
+  color: #ddd
+}
+
+article section {
+  flex: 1;
+  padding: 2rem;
+  font-size: 1.5rem;
+  max-width: 700px;
+  box-sizing: content-box;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+}
+
+article h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  color: white
+}
+
+article section h1 + p {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+article section div > p {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+article picture {
+  flex: 1;
+  aspect-ratio: 1/1;
+  max-height: 1000px;
+}
+
+article picture img {
+  display: block;
+}
+
+.burger {
+  display: none;
+}
+
+nav input {
+  display: none;
+}
+
+.buttons p {
+  margin: 2rem 0 1rem 0;
+  font-size: 1rem;
+}
+
+.buttons ul {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.buttons ul li {
+  min-width: calc(25% - 1rem);
+  flex: 1 1 auto;
+}
+
+.buttons ul li a {
+  display: block;
+  padding: .5rem 1rem;
+  border: 1px solid #666;
+  background: #333;
+  transform: all ease .3s;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.buttons .bandcamp {
+  color: #6399a8
+}
+
+.buttons .bandcamp:hover {
+  background: #6399a8;
+  color: white
+}
+
+.buttons .spotify {
+  color: #1ed760;
+}
+
+.buttons .spotify:hover {
+  background: #1ed760;
+  color: white
+}
+
+.buttons .apple-music {
+  color: #FA233B;
+}
+
+.buttons .apple-music:hover {
+  background: #FA233B;
+  color: white
+}
+
+.buttons .deezer:hover {
+  background: white;
+  color: #333
+}
+
+.player {
+  margin-bottom: 1rem;
+}
+
+.player iframe {
+  width: 100%;
+  height: 373px;
+  max-width: 700px;
+  margin: auto;
+  border: none;
+  display: block;
+}
+
+article footer {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: row;
+  font-size: 1rem;
+}
+
+article footer * {
+  margin: 0;
+}
+
+article footer time {
+  text-align: right;
+  display: block;
+  width: 100%;
+}
+
+article footer p, article footer p + time {
+  width: 50%;
+}
+
+.buttons + footer {
+  margin-top: 2vh;
+}
+
+@media only screen and (max-width: 1023px) and (orientation: portrait){
+  #main {
+    height: auto;
+    padding-top: 8vh;
+  }
+
+  article {
+    padding: 1rem;
+    flex-direction: column-reverse;
+  }
+
+  article section {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: none;
+    background: #000000DD;
+  }
+
+  article picture {
+    aspect-ratio: 1/1;
+    width: 100%;
+    height: auto;
+    max-height: none;
+  }
+
+  article h1 {
+    font-size: 5vw;
+    margin-bottom: 2vh;
+  }
+
+  article section h1 + p {
+    font-size: 4vw;
+    margin-bottom: 2vh;
+  }
+
+  article section div > p {
+    font-size: 3.8vw;
+    margin-bottom: 2vh;
+  }
+  
+  .burger {
+    display: block;
+    position: fixed;
+    top: .3rem;
+    right: .3rem;
+  }
+
+  .burger svg {
+    fill: #ccc;
+    width: 1rem;
+  }
+
+  #main > header, nav, nav ul {
+    height: auto;
+  }
+
+  #main > header nav ul {
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    background-color: black;
+  }
+
+  #main > header nav ul li:not(:first-child) {
+    display: none;
+    margin-right: auto;
+    width: 100%;
+    background-color: black;
+  }
+
+  #main > header nav ul li:not(:first-child) a{
+    margin-right: auto;
+    width: 100%;
+    padding: 4vh 3vh;
+  }
+  
+  #menu + label .burger-open {
+    display: block;
+  }
+  
+  #menu + label .burger-close {
+    display: none;
+  }
+
+  #menu:checked + label .burger-open {
+    display: none;
+  }
+
+  #menu:checked + label .burger-close {
+    display: block;
+  }
+
+  #menu:checked + label + ul li:not(:first-child) {
+    display: block;
+  }
+
+  .buttons ul li {
+    width: 100%;
+    flex: 1 1 auto;
+  }
+}
+
+@media only screen and (max-width: 1023px) and (orientation: landscape) {
+  #main {
+    height: auto;
+    padding-top: 3rem;
+  }
+  
+  article {
+    padding: 1rem;
+  }
+
+  article section {
+    width: 100%;
+    max-width: none;
+  }
+
+  article h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  article section h1 + p {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  article section p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+}

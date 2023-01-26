@@ -1,0 +1,11 @@
+main:
+  - url: https://mewsse.bandcamp.com/
+    title: Bandcamp
+  - url: https://soundcloud.com/mewsse
+    title: Soundcloud
+  - url: https://open.spotify.com/artist/5JNwCBZdxU1N8DSPnOtGAp
+    title: Spotify
+  - url: https://music.apple.com/us/artist/jeremy-barbe/1646865410a
+    title: Apple Music
+  - url: https://www.deezer.com/us/artist/184550007
+    title: Deezer

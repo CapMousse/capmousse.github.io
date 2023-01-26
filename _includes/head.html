@@ -1,0 +1,57 @@
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="Author" content="Jeremy Barbe">
+<meta name="description" content="Let's make some music">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+{% if page.title %}
+  <title>Jeremy Barbe | {{ page.title }}</title>
+  <meta property="og:title" content="{{ page.title }}">
+{% else %}
+  <title>Jeremy Barbe | Official website</title>
+  <meta property="og:title" content="Jeremy Barbe">
+{% endif %}
+
+
+{% if page.exerpt %}
+  <meta property="og:description" content="{{ page.exerpt }}">
+  <meta name="twitter:description" content="{{ page.exerpt }}">
+{% else %}
+  <meta property="og:description" content="Let's make some music">
+  <meta name="twitter:description" content="Let's make some music">
+{% endif %}
+
+
+{% if page.url %}
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+{% else %}
+  <meta property="og:url" content="{{ '/' | absolute_url }}">
+{% endif %}
+
+{% if page.illustration %}
+  <meta property="og:image" content="{{ page.illustration.url | absolute_url }}">
+  <meta name="twitter:image" content="{{ page.illustration.url | absolute_url }}">
+{% else %}
+  <meta property="og:image" content="{{ 'assets/images/avatar.jpg' | absolute_url }}">
+  <meta name="twitter:image" content="{{ 'assets/images/avatar.jpg' | absolute_url }}">
+{% endif %}
+
+{% if page.illustration %}
+  <meta property="og:modified_time" content="{{ page.date | date_to_xmlschema }}">
+{% endif %}
+
+<meta property="og:site_name" content="Jeremy Barbe">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@capitainemousse">
+<meta name="twitter:creator" content="@capitainemousse">
+
+<link rel="canonical" href="{{ '/' | absolute_url }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="{{ '/assets/images/avatar.jpg' | absolute_url }}" type="image/jpg">
+<link rel="icon" href="{{ '/assets//images/favicon.ico' | absolute_url }}" type="image/x-icon">
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">

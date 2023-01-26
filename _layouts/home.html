@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+{{ content }}
+
+{% if paginator %}
+  {% assign posts = paginator.posts %}
+{% else %}
+  {% assign posts = site.posts %}
+{% endif %}
+
+{% for post in posts %}
+  {% include small-post.html %}
+{% endfor %}
+
+{% include paginator.html %}
