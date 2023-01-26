@@ -109,6 +109,7 @@ strong {
 }
 
 #main > section {
+  flex-flow: column;
   display: flex;
   justify-content: center;
   align-items: center;
