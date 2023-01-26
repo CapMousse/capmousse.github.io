@@ -24,5 +24,5 @@ No story, no imposed style, just me and my creativity.
 A **New Beginning**.
 
 <div class="player">
-  <iframe src="https://bandcamp.com/EmbeddedPlayer/album=505588304/size=large/bgcol=3305690500/linkcol=4ec5ec/artwork=none/transparent=true/" seamless=""><a href="https://mewsse.bandcamp.com/album/new-beginning">New Beginning by Jeremy Barbe</a></iframe>
+  <iframe src="https://bandcamp.com/EmbeddedPlayer/album=3305690500/size=large/bgcol=333333/linkcol=4ec5ec/artwork=none/transparent=true/" seamless=""><a href="https://mewsse.bandcamp.com/album/new-beginning">New Beginning by Jeremy Barbe</a></iframe>
 </div>
