@@ -4,6 +4,14 @@ sass:
   sass_dir: _sass
   style: compressed
 
+exclude:
+  - _config.yml
+  - .gitignore
+  - Gemfile
+  - "*.gemspec"
+  - LICENSE.txt
+  - README.md
+
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
