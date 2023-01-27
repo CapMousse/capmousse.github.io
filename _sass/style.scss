@@ -84,11 +84,6 @@ pre {
   -webkit-user-drag: element;
 }
 
-body {
-  background: url(/assets/backgrounds/exploration.jpg) no-repeat center center;
-  background-size: cover;
-}
-
 html, html body {
   height: 100%;
   font-family: 'Lato', sans-serif;
@@ -172,6 +167,8 @@ strong {
 }
 
 #video {
+  background: url(/assets/backgrounds/exploration.jpg) no-repeat center center;
+  background-size: cover;
   position: fixed;
   top: 0;
   left: 0;
