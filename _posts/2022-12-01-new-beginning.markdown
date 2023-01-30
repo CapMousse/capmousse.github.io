@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  New Beginning, first ep, still experimenting!
+title:  New Beginning, first ep, new experiments!
 date:   2022-12-01 00:00:00 +0100
 categories: ep
 illustration: 
@@ -17,7 +17,7 @@ links:
     url: https://www.deezer.com/us/album/379634887
 ---
 
-This is more a "let's try something" king of ep.
+This is more a "let's try something" kind of ep.
 
 No story, no imposed style, just me and my creativity.
 
