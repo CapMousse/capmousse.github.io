@@ -147,7 +147,8 @@ strong {
   background: black;
 }
 
-#main > header nav > ul > li:hover ul {
+#main > header nav > ul > li:hover ul,
+#main > header nav > ul > li:focus ul {
   display: block;
 }
 
