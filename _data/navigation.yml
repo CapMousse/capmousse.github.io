@@ -9,3 +9,13 @@ main:
     title: Apple Music
   - url: https://www.deezer.com/us/artist/184550007
     title: Deezer
+
+social:
+  - url: https://www.tiktok.com/@mewsse
+    title: Tiktok
+  - url: https://twitter.com/capitainemousse
+    title: Twitter
+  - url: https://www.instagram.com/capmousse/
+    title: Instagram
+  - url: https://www.youtube.com/@mewsse
+    title: Youtube

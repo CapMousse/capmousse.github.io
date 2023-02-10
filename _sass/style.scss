@@ -125,7 +125,7 @@ strong {
   left: 0;
 }
 
-#main > header ul {
+#main > header nav > ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -135,21 +135,41 @@ strong {
   font-size: 1rem;
 }
 
-#main > header ul li:first-child {
+#main > header nav > ul > li {
+  position: relative;
+}
+
+#main > header nav > ul li ul {
+  display: none;
+  position: absolute;
+  top: 3rem;
+  right: 0;
+  background: black;
+}
+
+#main > header nav > ul > li:hover ul {
+  display: block;
+}
+
+#main > header nav > ul > li:first-child {
   margin-right: auto;
 }
 
-#main > header ul li:not(:first-child) a {
+#main > header nav > ul > li:not(:first-child) div,
+#main > header nav > ul li ul li a {
   padding: 0 1rem;
   transition: all ease .3s;
 }
 
-#main > header ul li:not(:first-child) a:hover {
+#main > header nav > ul > li:not(:first-child) div:hover,
+#main > header nav > ul li ul li a:hover {
   background: #cccccc;
   color: #222;
 }
 
-#main > header ul a{
+#main > header ul a, 
+#main > header ul div{
+  cursor: pointer;
   display: flex;
   align-items: center;
   height: 3rem;
@@ -335,7 +355,7 @@ article footer p, article footer p + time {
 @media only screen and (max-width: 1023px) and (orientation: portrait){
   #main {
     height: auto;
-    padding-top: 8vh;
+    padding-top: 3rem;
   }
 
   article {
@@ -377,6 +397,7 @@ article footer p, article footer p + time {
     position: fixed;
     top: .3rem;
     right: .3rem;
+    z-index: 999;
   }
 
   .burger svg {
@@ -388,11 +409,34 @@ article footer p, article footer p + time {
     height: auto;
   }
 
+  #main > header {
+    position: initial;
+  }
+
   #main > header nav ul {
     flex-direction: column;
     justify-content: left;
     align-items: flex-start;
     background-color: black;
+  }
+
+  #main>header nav>ul {
+    display: block;
+    height: auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+
+  #main > header nav ul li ul {
+    display: block;
+    position: initial;
+  }
+
+  #main > header nav ul li div {
+    background-color: #222;
+    padding: 4vh 3vh !important;
   }
 
   #main > header nav ul li:not(:first-child) {
@@ -422,6 +466,12 @@ article footer p, article footer p + time {
 
   #menu:checked + label .burger-close {
     display: block;
+  }
+  
+  #menu:checked + label + ul {
+    top: 0;
+    bottom: 0;
+    overflow: auto;
   }
 
   #menu:checked + label + ul li:not(:first-child) {

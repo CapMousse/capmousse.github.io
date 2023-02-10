@@ -19,12 +19,29 @@
           <span>Jeremy Barbe</span>
         </a>
       </li>
+
+      <li>
+        <div>Listen</div>
+        <ul>
+          {%- for link in site.data.navigation.main -%}
+            <li>
+              <a href="{{ link.url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </li>
+
+      <li>
+        <div>Follow</div>
+        <ul>
+          {%- for link in site.data.navigation.social -%}
+            <li>
+              <a href="{{ link.url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </li>
       
-      {%- for link in site.data.navigation.main -%}
-        <li>
-          <a href="{{ link.url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
-        </li>
-      {%- endfor -%}
     </ul>
   </nav>
 </header>
